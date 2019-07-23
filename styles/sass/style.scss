@@ -1,12 +1,38 @@
-@import "header.scss";
-@import "footer.scss";
+@import "_variables.scss";
+@import "_mixin.scss";
 
-@charset 'utf-8';
+@font-face{
+    font-family: "Archivo";
+    src: url("/fonts/Archivo-Bold.ttf") format(ttf);
+}
+
+body{
+    perspective: 3000px;
+    perspective-origin: center;
+}
+
+header{
+    background-color: $part_color;
+    content: $logo;
+    @include size (100%, 10em);
+}
 
 
+h1{
+    font-family: "Archivo";
+    color: $font_color;
+    font-size: 2.8em;
+    text-align: center;
+    line-height: 210px;
+}
+
+article{
+    @include size   (50%, 8em);
+    backface-visibility: hidden;
+}
 
 
-
-
-
-
+footer{
+    background-color: $part_color;
+    @include size (100%, 4em);
+}
