@@ -1,3 +1,55 @@
+/* line 4, ../sass/layout/_header.scss */
+header {
+  width: 100%;
+  height: 10em;
+  background-image: url("../../../images/logo.jpg");
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+/* line 3, ../sass/pages/_home.scss */
+body {
+  perspective: 3000px;
+  perspective-origin: center;
+}
+
+/* line 8, ../sass/pages/_home.scss */
+article {
+  transform: translateZ(200px);
+}
+
+/* line 12, ../sass/pages/_home.scss */
+aside {
+  display: inline-block;
+}
+
+/* line 16, ../sass/pages/_home.scss */
+#typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: 2.2px;
+  animation: typing 7s steps(14, end), blink 0.75s step-end infinite;
+  white-space: nowrap;
+  font-size: 30px;
+  font-weight: 700;
+  border-right: 4px solid #579c87;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "Archivo";
   src: url("/fonts/Archivo-Bold.ttf") format(ttf);
@@ -17,59 +69,4 @@
   50% {
     border-color: orange;
   }
-}
-/* line 19, ../sass/style.scss */
-body {
-  perspective: 3000px;
-  perspective-origin: center;
-}
-
-/* line 24, ../sass/style.scss */
-header {
-  background-color: #579c87;
-  width: 100%;
-  height: 10em;
-  background-image: url("/images/logo.jpg");
-  background-repeat: no-repeat;
-}
-
-/* line 32, ../sass/style.scss */
-h1 {
-  font-family: "Archivo";
-  color: #fcca46;
-  font-size: 2.8em;
-  text-align: center;
-  line-height: 210px;
-}
-
-/* line 40, ../sass/style.scss */
-article {
-  width: 50%;
-  height: 8em;
-  backface-visibility: hidden;
-}
-
-/* line 45, ../sass/style.scss */
-aside {
-  display: inline-block;
-}
-
-/* line 49, ../sass/style.scss */
-#typewriter-text {
-  display: inline-block;
-  overflow: hidden;
-  letter-spacing: 2.2px;
-  animation: typing 7s steps(14, end), blink 0.75s step-end infinite;
-  white-space: nowrap;
-  font-size: 30px;
-  font-weight: 700;
-  border-right: 4px solid #579c87;
-  box-sizing: border-box;
-}
-
-/* line 62, ../sass/style.scss */
-footer {
-  background-color: #579c87;
-  width: 100%;
-  height: 4em;
 }

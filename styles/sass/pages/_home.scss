@@ -1,0 +1,26 @@
+@import 'components/animation';
+
+body{
+    perspective: 3000px;
+    perspective-origin: center;
+}
+
+article{
+    transform: translateZ(200px);
+}
+
+aside{
+    display: inline-block;
+}
+
+#typewriter-text{
+    display: inline-block;
+    overflow: hidden;
+    letter-spacing: 2.2px;
+    animation: typing 7s steps(14,end), blink .75s step-end infinite;  
+    white-space: nowrap;
+    font-size: 30px;
+    font-weight: 700;
+    border-right: 4px solid $part_color;
+    box-sizing: border-box;
+}

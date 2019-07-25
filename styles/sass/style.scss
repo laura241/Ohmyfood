@@ -1,10 +1,11 @@
-@import "_variables.scss";
-@import "_mixin.scss";
+@import 'abstracts/variables';
+@import 'abstracts/mixin';
+@import 'layout/header';
+@import 'pages/home';
+@import 'themes/theme.scss';
+@import 'vendors/compass_libraries';
+@import 'components/animation';
 
-@font-face{
-    font-family: "Archivo";
-    src: url("/fonts/Archivo-Bold.ttf") format(ttf);
-}
 
 @keyframes typing {
     from {width: 0% }
@@ -16,50 +17,6 @@
     50% {border-color: orange;}
 }
 
-body{
-    perspective: 3000px;
-    perspective-origin: center;
-}
-
-header{
-    background-color: $part_color;
-    @include size (100%, 10em);
-    background-image: url("/images/logo.jpg");
-    background-repeat: no-repeat;
-}
 
 
-h1{
-    font-family: "Archivo";
-    color: $font_color;
-    font-size: 2.8em;
-    text-align: center;
-    line-height: 210px;
-}
 
-article{
-    @include size   (50%, 8em);
-    backface-visibility: hidden;
-}
-
-aside{
-    display: inline-block;
-}
-
-#typewriter-text{
-    display: inline-block;
-    overflow: hidden;
-    letter-spacing: 2.2px;
-    animation: typing 7s steps(14,end), blink .75s step-end infinite;  
-    white-space: nowrap;
-    font-size: 30px;
-    font-weight: 700;
-    border-right: 4px solid $part_color;
-    box-sizing: border-box;
-}
-
-
-footer{
-    background-color: $part_color;
-    @include size (100%, 4em);
-}

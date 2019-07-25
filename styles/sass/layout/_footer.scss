@@ -1,0 +1,6 @@
+@import "../abstracts/_variables";
+
+footer{
+    background-color: $part_color;
+    @include size (100%, 4em);
+}
