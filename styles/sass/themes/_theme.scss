@@ -1,4 +1,13 @@
+@import '../abstracts/variables';
+@import '../vendors/compass_libraries';
+
 @font-face{
     font-family: "Archivo";
     src: url("/fonts/Archivo-Bold.ttf") format(ttf);
+}
+
+body{
+    font-family: "Archivo", Arial, Helvetica, sans-serif;
+    margin-bottom: $unit;
+    font-size: $base-font-size;
 }

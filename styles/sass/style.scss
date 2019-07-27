@@ -1,3 +1,5 @@
+@charset 'utf-8';
+
 @import 'abstracts/variables';
 @import 'abstracts/mixin';
 @import 'layout/header';
@@ -7,15 +9,6 @@
 @import 'components/animation';
 
 
-@keyframes typing {
-    from {width: 0% }
-    to {width: 100% }
-}
-
-@keyframes blink {
-    from, to { border-color: transparent }
-    50% {border-color: orange;}
-}
 
 
 

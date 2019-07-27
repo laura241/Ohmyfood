@@ -1,8 +1,9 @@
-/* line 4, ../sass/layout/_header.scss */
+/* line 5, ../sass/layout/_header.scss */
 header {
   width: 100%;
   height: 10em;
-  background-image: url("../../../images/logo.jpg");
+  background: linear-gradient(to right, white, white, #dec4c0);
+  display: block;
 }
 
 @keyframes typing {
@@ -18,7 +19,36 @@ header {
     border-color: transparent;
   }
   50% {
-    border-color: orange;
+    border-color: blue;
+  }
+}
+@keyframes slider {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
   }
 }
 /* line 3, ../sass/pages/_home.scss */
@@ -29,15 +59,27 @@ body {
 
 /* line 8, ../sass/pages/_home.scss */
 article {
-  transform: translateZ(200px);
+  width: 80%;
+  max-width: 1000px;
+  overflow: hidden;
 }
 
-/* line 12, ../sass/pages/_home.scss */
+/* line 14, ../sass/pages/_home.scss */
+#slider {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  animation: 25s slider infinite;
+}
+
+/* line 25, ../sass/pages/_home.scss */
 aside {
   display: inline-block;
 }
 
-/* line 16, ../sass/pages/_home.scss */
+/* line 29, ../sass/pages/_home.scss */
 #typewriter-text {
   display: inline-block;
   overflow: hidden;
@@ -46,7 +88,7 @@ aside {
   white-space: nowrap;
   font-size: 30px;
   font-weight: 700;
-  border-right: 4px solid #579c87;
+  border-right: 4px solid blue;
   box-sizing: border-box;
 }
 
@@ -54,19 +96,9 @@ aside {
   font-family: "Archivo";
   src: url("/fonts/Archivo-Bold.ttf") format(ttf);
 }
-@keyframes typing {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes blink {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
+/* line 9, ../sass/themes/_theme.scss */
+body {
+  font-family: "Archivo", Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
