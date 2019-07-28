@@ -4,7 +4,7 @@
 
 header{
     @include size (100%, 10em);
-    background: linear-gradient(to right, white,white, rgb(222,196,192));
+    background: $background;
     display: block;
 }
 

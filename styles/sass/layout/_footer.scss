@@ -1,6 +1,9 @@
 @import "../abstracts/_variables";
 
 footer{
-    background-color: $part_color;
-    @include size (100%, 4em);
+    @include size (100%, 5em);
+    background: $background;
+    display: flex;
+    justify-content: space-around;
 }
+
