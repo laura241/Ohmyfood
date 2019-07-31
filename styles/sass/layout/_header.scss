@@ -1,11 +1,13 @@
 
 @import '../abstracts/mixin';
 @import '../abstracts/variables';
+@import '../themes/theme';
 
 header{
     @include size (100%, 10em);
     background: $background;
     display: block;
+    border-bottom: 3px double $color;
 }
 
 

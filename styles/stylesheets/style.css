@@ -1,18 +1,103 @@
-/* line 5, ../sass/layout/_header.scss */
+@font-face {
+  font-family: 'Chrysuni';
+  src: url("../fonts/chrysuni.eot") format("eot"), url("../fonts/chrysuni.woff") format("woff"), url("../fonts/chrysuni.ttf") format("truetype"), url("../fonts/chrysuni.svg") format("svg");
+}
+/* line 14, ../sass/themes/_theme.scss */
+body {
+  font-family: 'Chrysuni', Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  font-size: 16px;
+  background-color: #dec4c0;
+  width: 100%;
+  height: 800px;
+}
+
+/* line 23, ../sass/themes/_theme.scss */
+.page_menu {
+  background-image: url(../../images/menunote.jpg);
+  opacity: 0.6;
+}
+
+/* line 6, ../sass/layout/_header.scss */
 header {
   width: 100%;
   height: 10em;
   background: linear-gradient(to right, white, white, #dec4c0);
   display: block;
+  border-bottom: 3px double #dec4c0;
 }
 
-/* line 3, ../sass/layout/_footer.scss */
+/* line 4, ../sass/layout/_footer.scss */
 footer {
   width: 100%;
   height: 5em;
   background: linear-gradient(to right, white, white, #dec4c0);
   display: flex;
   justify-content: space-around;
+  font-family: "Chrysanthi Unicode Regular";
+}
+
+/* line 4, ../sass/pages/_home.scss */
+body {
+  width: 100%;
+  height: auto;
+}
+
+/* line 10, ../sass/pages/_home.scss */
+#photo_menunote {
+  width: 30.30303%;
+  height: 250px;
+  margin-top: 5%;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background: url(../../images/menunote.jpg);
+}
+
+/* line 17, ../sass/pages/_home.scss */
+#photo_menuchic {
+  width: 30.30303%;
+  height: 250px;
+  margin-top: 5%;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background: url(../../images/menuchic.jpg);
+}
+
+/* line 24, ../sass/pages/_home.scss */
+#photo_menudelice {
+  width: 30.30303%;
+  height: 250px;
+  margin-top: 5%;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background: url(../../images/menudelice.jpg);
+}
+
+/* line 31, ../sass/pages/_home.scss */
+#photo_menupalette {
+  width: 30.30303%;
+  height: 250px;
+  margin-top: 5%;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background: url(../../images/menupalette.jpg);
+}
+
+/* line 38, ../sass/pages/_home.scss */
+.slider {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* line 45, ../sass/pages/_home.scss */
+h1 {
+  background: white;
+}
+
+/* line 49, ../sass/pages/_home.scss */
+p {
+  background: white;
+  margin-bottom: 2%;
 }
 
 @keyframes typing {
@@ -30,15 +115,4 @@ footer {
   50% {
     border-color: blue;
   }
-}
-@font-face {
-  font-family: "Archivo";
-  src: url("/fonts/Archivo-Bold.ttf") format(ttf);
-}
-/* line 9, ../sass/themes/_theme.scss */
-body {
-  font-family: "Archivo", Arial, Helvetica, sans-serif;
-  margin-bottom: 10px;
-  font-size: 16px;
-  background: linear-gradient(to right, white, white, #dec4c0);
 }

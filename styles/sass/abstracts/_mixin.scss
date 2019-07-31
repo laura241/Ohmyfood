@@ -5,3 +5,9 @@
     height: $height;
 }
 
+@mixin carte ($margin-top, $border-radius, $background-repeat){
+    margin-top: $margin-top;
+    border-radius: $border-radius;
+    background-repeat: $background-repeat;
+}
+

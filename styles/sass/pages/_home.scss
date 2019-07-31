@@ -1,2 +1,54 @@
-@import 'components/animation';
+@import '../abstracts/variables';
+@import '../abstracts/mixin';
+
+body{
+    width: $width;
+    height: $height;
+}
+
+
+#photo_menunote{
+    width: $width /3.3;
+    height: 250px;
+    @include carte (5%, 5px, no-repeat);
+    background: url(../../images/menunote.jpg);
+}
+
+#photo_menuchic{
+    width: $width /3.3;
+    height: 250px;
+    @include carte (5%, 5px, no-repeat);
+    background: url(../../images/menuchic.jpg);
+}
+
+#photo_menudelice{
+    width: $width /3.3;
+    height: 250px;
+    @include carte (5%, 5px, no-repeat);
+    background: url(../../images/menudelice.jpg);
+}
+
+#photo_menupalette{
+    width: $width /3.3;
+    height: 250px;
+    @include carte (5%, 5px, no-repeat);
+    background: url(../../images/menupalette.jpg);
+}
+
+.slider{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+h1{
+    background: white;
+}
+
+p{
+    background: white;
+    margin-bottom: 2%;  
+}
+
 

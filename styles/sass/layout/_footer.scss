@@ -1,9 +1,11 @@
-@import "../abstracts/_variables";
+@import '../abstracts/variables';
+@import '../themes/theme';
 
 footer{
     @include size (100%, 5em);
     background: $background;
     display: flex;
     justify-content: space-around;
+    font-family: "Chrysanthi Unicode Regular";
 }
 

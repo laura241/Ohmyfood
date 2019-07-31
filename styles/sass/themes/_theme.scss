@@ -1,14 +1,26 @@
 @import '../abstracts/variables';
 @import '../vendors/compass_libraries';
 
-@font-face{
-    font-family: "Archivo";
-    src: url("/fonts/Archivo-Bold.ttf") format(ttf);
-}
+
+@font-face {
+    font-family:'Chrysuni';
+    src: url('../fonts/chrysuni.eot') format('eot'),
+    url('../fonts/chrysuni.woff') format('woff'),
+    url('../fonts/chrysuni.ttf') format('truetype'),
+    url('../fonts/chrysuni.svg') format('svg');
+    }
+
 
 body{
-    font-family: "Archivo", Arial, Helvetica, sans-serif;
+    font-family: 'Chrysuni', Arial, Helvetica, sans-serif;
     margin-bottom: $unit;
     font-size: $base-font-size;
-    background: $background;
+    background-color: $color;
+    width:  $width;
+    height: 800px;
+}
+
+.page_menu{
+    background-image: url(../../images/menunote.jpg);
+    opacity: 0.6;
 }
