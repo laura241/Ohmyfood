@@ -1,21 +1,15 @@
 @import '../abstracts/variables';
-@import '../vendors/compass_libraries';
+@import '../vendors/compasslibraries';
 
-
-@font-face {
-    font-family:'Chrysuni';
-    src: url('../fonts/chrysuni.eot') format('eot'),
-    url('../fonts/chrysuni.woff') format('woff'),
-    url('../fonts/chrysuni.ttf') format('truetype'),
-    url('../fonts/chrysuni.svg') format('svg');
-    }
+@include font-face("Chrysanthi Unicode Regular", font-files("chrysuni.woff", "chrysuni.svg#abcd", "chrysuni.ttf", "chrysuni.eot"));
 
 
 body{
-    font-family: 'Chrysuni', Arial, Helvetica, sans-serif;
+    font-family: "Chrysanthi Unicode Regular", $default-font-stack;
+    margin: 0;
     margin-bottom: $unit;
     font-size: $base-font-size;
-    background-color: $color;
+    background-color: white;
     width:  $width;
     height: 800px;
 }

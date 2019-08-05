@@ -5,9 +5,10 @@
 
 header{
     @include size (100%, 10em);
-    background: $background;
-    display: block;
     border-bottom: 3px double $color;
+    text-align: left;
+    @include background-image(linear-gradient(to right, white, white, $color));
+    $experimental-support-for-svg: true;
 }
 
 

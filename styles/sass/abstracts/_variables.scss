@@ -1,5 +1,9 @@
 $unit: 10px;
 $width: 100%;
 $height: auto;
-$background: linear-gradient(to right, white,white, rgb(222,196,192));
-$color: rgb(222,196,192);
+$height_article: 700px; //hauteur section article index
+$background: linear-gradient(to right, white,white, rgb(222,196,192)); //couleur background header
+$color: rgb(222,196,192); //couleur background body
+$width_carte: $width /4;
+$height_carte: $height_article /2.5;
+$default-font-stack: Arial, sans-serif;

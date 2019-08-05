@@ -1,4 +1,10 @@
 require 'compass/import-once/activate'
+module Compass::ImportOnce::Importer
+    def find(uri, options, *args)
+      uri, force_import = handle_force_import(uri.gsub(/^\(NOT IMPORTED\) /, ''))
+      maybe_replace_with_dummy_engine(super(uri, options, *args), options, force_import)
+    end
+  end
 require 'compass-recipes'
 # Require any additional compass plugins here.
 
@@ -8,6 +14,7 @@ css_dir = "stylesheets"
 sass_dir = "sass"
 images_dir = "images"
 javascripts_dir = "javascripts"
+environment = :development
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

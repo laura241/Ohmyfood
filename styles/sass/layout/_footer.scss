@@ -2,10 +2,16 @@
 @import '../themes/theme';
 
 footer{
-    @include size (100%, 5em);
-    background: $background;
+    @include background-image(linear-gradient(to right, white, white, $color));
+    $experimental-support-for-svg: true;
+    @include size (100%, 6em);
     display: flex;
     justify-content: space-around;
     font-family: "Chrysanthi Unicode Regular";
+    font-size: 0.6em;
+    border-top: 3px double $color;
+    p{
+        background: none;
+    }
 }
 

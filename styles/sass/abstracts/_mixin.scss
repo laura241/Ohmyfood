@@ -1,13 +1,23 @@
 @import '_variables.scss';
 
+
 @mixin size ($width, $height: $width){
     width: $width;
     height: $height;
 }
 
-@mixin carte ($margin-top, $border-radius, $background-repeat){
-    margin-top: $margin-top;
-    border-radius: $border-radius;
-    background-repeat: $background-repeat;
+
+@mixin font-face($name, $file){
+    @font-face{
+        font-family: $name;
+        src: url("fonts/#{$file}.eot");
+        src: url("fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
+        url("fonts/#{$file}.woff") format("woff"),
+        url("fonts/#{$file}.ttf") format("truetype"),
+        url("fonts/#{$file}.svg?#webfont") format("svg");
+    }
 }
 
+
+
+ 
