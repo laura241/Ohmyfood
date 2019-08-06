@@ -1,7 +1,7 @@
 @import '../abstracts/variables';
 @import '../vendors/compasslibraries';
 
-@include font-face("Chrysanthi Unicode Regular", font-files("chrysuni.woff", "chrysuni.svg#abcd", "chrysuni.ttf", "chrysuni.eot"));
+@include font-face("Chrysanthi Unicode Regular", font-files("chrysuni.woff", "chrysuni.svg", "chrysuni.ttf", "chrysuni.eot"));
 
 
 body{

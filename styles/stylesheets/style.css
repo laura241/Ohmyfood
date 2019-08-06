@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Chrysanthi Unicode Regular";
-  src: url('/fonts/chrysuni.woff?1299458352') format('woff'), url('/fonts/chrysuni.svg?1299458352#abcd') format('svg'), url('/fonts/chrysuni.ttf?1299458352') format('truetype'), url('/fonts/chrysuni.eot?1299458352') format('embedded-opentype');
+  src: url('/fonts/chrysuni.woff') format('woff'), url('/fonts/chrysuni.svg') format('svg'), url('/fonts/chrysuni.ttf') format('truetype'), url('/fonts/chrysuni.eot') format('embedded-opentype');
 }
 /* line 7, ../sass/themes/_theme.scss */
 body {
