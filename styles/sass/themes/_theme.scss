@@ -1,16 +1,11 @@
 @import '../abstracts/variables';
-@import '../vendors/compasslibraries';
-
-@include font-face("Chrysanthi Unicode Regular", font-files("chrysuni.woff", "chrysuni.svg", "chrysuni.ttf", "chrysuni.eot"));
 
 
 body{
-    font-family: "Chrysanthi Unicode Regular", $default-font-stack;
+    font-family: $default-font-stack;
     margin: 0;
     margin-bottom: $unit;
-    font-size: $base-font-size;
     background-color: white;
-    width:  $width;
     height: 800px;
 }
 

@@ -2,8 +2,7 @@
 @import '../themes/theme';
 
 footer{
-    @include background-image(linear-gradient(to right, white, white, $color));
-    $experimental-support-for-svg: true;
+    background-image:linear-gradient(to right, white, white, $color);
     @include size (100%, 6em);
     display: flex;
     justify-content: space-around;
