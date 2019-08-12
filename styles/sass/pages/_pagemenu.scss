@@ -1,0 +1,36 @@
+body{
+    @include size (100%, auto);
+}
+
+
+.page_menu{ 
+    @include padding (0 0 0 0);
+    @include margin (0 0 0 0);
+    @include size (100%, 43em);
+}
+
+.menu_section{ 
+    @include size (100%, auto);
+    display: flex;
+    justify-content: space-between;
+}
+
+.plat{
+    @include size (40%, auto);
+    margin-right: 15%;
+    margin-left: 10%;
+}
+
+.prix{
+    @include size (40%, auto);
+    margin-left: 10%;
+}
+
+ul{
+    list-style-type:circle;
+}
+
+#dessert{
+    width: 100%;
+    text-align: center;
+}

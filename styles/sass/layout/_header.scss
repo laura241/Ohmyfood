@@ -2,12 +2,16 @@
 @import '../abstracts/mixin';
 @import '../abstracts/variables';
 @import '../themes/theme';
+@import '../../../bourbon/bourbon';
 
 header{
-    @include size (100%, 10em);
-    border-bottom: 3px double $color;
+    @include size (100%, 8em);
+    @include border-style(null null double);
+    @include border-width (null null 3px);
+    @include border-color (null null $color);
+    opacity: 0.7;
+    background-image:linear-gradient(to right, white, white, #FFFFFF80);
     text-align: left;
-    background-image:linear-gradient(to right, white, white, $color);
 }
 
 

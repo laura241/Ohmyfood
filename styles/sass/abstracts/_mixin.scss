@@ -6,10 +6,6 @@
     height: $height;
 }
 
-@mixin columns ($cols){
-    @extend.column; //style commun à toutes les colonnes
-    width: $cols * $column-width + ($column-gutter-width * 2) * ($cols-1); //largeur du bloc
-}
 
 
 

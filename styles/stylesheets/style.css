@@ -1,67 +1,168 @@
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-enable */
+@font-face {
+  font-family: "Chrysanthi Unicode Regular";
+  src: url("../fonts/chrysuni.eot?#iefix") format("embedded-opentype"), url("../fonts/chrysuni.woff2") format("woff2"), url("../fonts/chrysuni.woff") format("woff"), url("../fonts/chrysuni.ttf") format("truetype"), url("../fonts/chrysuni.svg#Chrysanthi Unicode Regular") format("svg");
+  font-style: normal;
+  font-weight: 400;
+}
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  margin-bottom: 10px;
-  background-color: white;
-  height: 800px;
+  background: url(../images/menu.jpg);
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
 }
 
-header {
+h1 {
+  height: 2em;
   width: 100%;
-  height: 10em;
-  border-bottom: 3px double #dec4c0;
-  text-align: left;
-  background-image: linear-gradient(to right, white, white, #dec4c0);
+  font-family: "Monaco", "Consolas", "Lucida Console", monospace, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 3em;
+  color: #dec4c0;
+  text-align: center;
 }
 
+h2 {
+  font-family: "Chrysanthi Unicode Regular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.6em;
+  position: relative;
+  text-align: center;
+  line-height: 100%;
+  overflow: hidden;
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+h2:before, h2:after {
+  content: ".";
+  border-bottom: solid 2px #000;
+  position: absolute;
+  line-height: 50%;
+  width: 100%;
+}
+
+h2:before {
+  margin-left: -100%;
+}
+
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-enable */
+header {
+  height: 10em;
+  width: 100%;
+  border-bottom-style: double;
+  border-bottom-width: 3px;
+  border-bottom-color: #dec4c0;
+  background-image: linear-gradient(to right, white, #FFFFFF80, #FFFFFF80);
+  text-align: left;
+}
+
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-enable */
+@font-face {
+  font-family: "Chrysanthi Unicode Regular";
+  src: url("../fonts/chrysuni.eot?#iefix") format("embedded-opentype"), url("../fonts/chrysuni.woff2") format("woff2"), url("../fonts/chrysuni.woff") format("woff"), url("../fonts/chrysuni.ttf") format("truetype"), url("../fonts/chrysuni.svg#Chrysanthi Unicode Regular") format("svg");
+  font-style: normal;
+  font-weight: 400;
+}
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  margin-bottom: 10px;
-  background-color: white;
-  height: 800px;
+  background: url(../images/menu.jpg);
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+h1 {
+  height: 2em;
+  width: 100%;
+  font-family: "Monaco", "Consolas", "Lucida Console", monospace, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 3em;
+  color: #dec4c0;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Chrysanthi Unicode Regular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.6em;
+  position: relative;
+  text-align: center;
+  line-height: 100%;
+  overflow: hidden;
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+h2:before, h2:after {
+  content: ".";
+  border-bottom: solid 2px #000;
+  position: absolute;
+  line-height: 50%;
+  width: 100%;
+}
+
+h2:before {
+  margin-left: -100%;
 }
 
 footer {
-  background-image: linear-gradient(to right, white, white, #dec4c0);
-  width: 100%;
   height: 6em;
+  width: 100%;
   display: flex;
+  background-image: linear-gradient(to right, white, #FFFFFF80, #FFFFFF80);
   justify-content: space-around;
-  font-family: "Chrysanthi Unicode Regular";
   font-size: 0.6em;
-  border-top: 3px double #dec4c0;
+  border-top-style: double;
+  border-top-width: 3px;
+  border-top-color: #dec4c0;
 }
 footer p {
-  background: none;
+  color: black;
+  font-size: 2em;
+  text-align: right;
 }
 
-#photo_menunote {
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinking-cursor {
+  from, to {
+    border-color: #dec4c0;
+  }
+  50% {
+    border-color: #dec4c0;
+  }
+}
+.photo_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  width: 30%;
+  height: 18em;
+  margin: 10% 2% 5%;
+}
+
+#menu_note {
   background: url(../images/menunote.jpg);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
-#photo_menuchic {
+#menu_chic {
   background: url(../images/menuchic.jpg);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
-#photo_menudelice {
+#menu_delice {
   background: url(../images/menudelice.jpg);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
-#photo_menupalette {
+#menu_palette {
   background: url(../images/menupalette.jpg);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .slider {
@@ -69,7 +170,7 @@ footer p {
   justify-content: space-around;
 }
 
-h1 {
+.title_restaurant h1 {
   color: white;
   margin-top: 9%;
   height: 40px;
@@ -79,25 +180,130 @@ h1 {
 }
 
 aside {
+  width: auto;
   height: 200px;
   line-height: 200px;
   text-align: center;
 }
 
-p {
-  background: #dec4c0;
-  color: white;
-  font-size: 2em;
-  text-align: right;
-  opacity: 0.8;
+#typewriter_text {
+  font-size: 1.8em;
+  color: black;
+  letter-spacing: 1em;
+  margin: 0;
+  overflow: auto;
+  border-right: 1em solid #dec4c0;
+  white-space: nowrap;
+  text-align: center;
+  animation: typing 3s infinite steps(14, end) backwards, blinking-cursor 3s infinite;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  margin-bottom: 10px;
-  background-color: white;
-  height: 800px;
+  width: 100%;
+  height: auto;
 }
+
+.page_menu {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 43em;
+}
+
+.menu_section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.plat {
+  width: 40%;
+  height: auto;
+  margin-right: 15%;
+  margin-left: 10%;
+}
+
+.prix {
+  width: 40%;
+  height: auto;
+  margin-left: 10%;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+#dessert {
+  width: 100%;
+  text-align: center;
+}
+
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-enable */
+@font-face {
+  font-family: "Chrysanthi Unicode Regular";
+  src: url("../fonts/chrysuni.eot?#iefix") format("embedded-opentype"), url("../fonts/chrysuni.woff2") format("woff2"), url("../fonts/chrysuni.woff") format("woff"), url("../fonts/chrysuni.ttf") format("truetype"), url("../fonts/chrysuni.svg#Chrysanthi Unicode Regular") format("svg");
+  font-style: normal;
+  font-weight: 400;
+}
+body {
+  margin: 0;
+  background: url(../images/menu.jpg);
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+h1 {
+  height: 2em;
+  width: 100%;
+  font-family: "Monaco", "Consolas", "Lucida Console", monospace, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 3em;
+  color: #dec4c0;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Chrysanthi Unicode Regular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.6em;
+  position: relative;
+  text-align: center;
+  line-height: 100%;
+  overflow: hidden;
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+h2:before, h2:after {
+  content: ".";
+  border-bottom: solid 2px #000;
+  position: absolute;
+  line-height: 50%;
+  width: 100%;
+}
+
+h2:before {
+  margin-left: -100%;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinking-cursor {
+  from, to {
+    border-color: #dec4c0;
+  }
+  50% {
+    border-color: #dec4c0;
+  }
+}
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-enable */
 
 /*# sourceMappingURL=style.css.map */
