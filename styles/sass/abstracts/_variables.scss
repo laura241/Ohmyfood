@@ -2,3 +2,12 @@ $unit: 10px;
 $background: linear-gradient(to right, white,white, rgb(222,196,192)); //couleur background header
 $color: rgb(222,196,192); //couleur background body
 $default-font-stack: Arial, sans-serif;
+
+$duration: 450ms;
+$tileWidth: 250px;
+$tileHeight: ($tileWidth / (16/9));
+$iconSize: 50px;
+$growFactor: 1.5; // 1.5 times the original size
+
+$moveLeft: -($tileWidth * ($growFactor - 1) / 2);
+$moveRight: $tileWidth * ($growFactor - 1);

@@ -5,8 +5,8 @@ body{
 
 .page_menu{ 
     @include padding (0 0 0 0);
-    @include margin (0 0 0 0);
-    @include size (100%, 43em);
+    @include margin (null 5%);
+    @include size (90%, 43em);
 }
 
 .menu_section{ 
@@ -16,7 +16,7 @@ body{
 }
 
 .plat{
-    @include size (40%, auto);
+    @include size (60%, auto);
     margin-right: 15%;
     margin-left: 10%;
 }
