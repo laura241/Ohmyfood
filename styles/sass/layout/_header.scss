@@ -9,8 +9,8 @@ header{
     @include border-style(null null double);
     @include border-width (null null 3px);
     @include border-color (null null $color);
+    @include prefix((background-image:linear-gradient(to right, white, white, #FFFFFF80)), webkit ms o);
     opacity: 0.7;
-    background-image:linear-gradient(to right, white, white, #FFFFFF80);
     text-align: left;
 }
 

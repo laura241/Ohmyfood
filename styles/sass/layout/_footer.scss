@@ -3,13 +3,13 @@
 
 footer{
     @include size (100%, 6em);
-    display: flex;
-    background-image:linear-gradient(to right, white, #FFFFFF80, #FFFFFF80);
-    justify-content: space-around;
-    font-size: 0.6em;
+    @include prefix((background-image:linear-gradient(to right, white, white, #FFFFFF80)), webkit ms o);
     @include border-style(double null null);
     @include border-width (3px null null);
     @include border-color ($color null null);
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.6em;
     p{
         color: black;
         font-size: 2em;

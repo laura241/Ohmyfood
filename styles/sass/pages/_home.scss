@@ -12,16 +12,36 @@
     background: url(../images/menunote.jpg);
 }
 
+#menu_note:hover{
+    animation-iteration-count: infinite;
+    @include prefix((animation: shake 0.5s), webkit ms o);
+}
+
 #menu_chic{
     background: url(../images/menuchic.jpg);
+}
+
+#menu_chic:hover{
+    @include prefix((animation: shake 0.5s), webkit ms o);
+    animation-iteration-count: infinite;
 }
 
 #menu_delice{
     background: url(../images/menudelice.jpg);
 }
 
+#menu_delice:hover{
+    @include prefix((animation: shake 0.5s), webkit ms o);
+    animation-iteration-count: infinite;
+}
+
 #menu_palette{
     background: url(../images/menupalette.jpg);
+}
+
+#menu_palette:hover{
+    @include prefix((animation: shake 0.5s), webkit ms o);
+    animation-iteration-count: infinite;
 }
 
 .slider{
@@ -36,6 +56,7 @@
        padding: 0;
        text-align: left;
        animation: 30s slider infinite;
+       @include prefix((animation: 30s slider infinite), webkit ms o);
    }
 }
 
@@ -53,10 +74,11 @@
     color: white;
     text-shadow: -1px -1px 0 rgba(250,250,250,0.3);
     background-color: $color;
+    opacity: 0.8;
     font-size: 2em;
-    text-align: right;
+    text-align: center;
     position: absolute;
-    bottom: 0px;
+    bottom: 35%;
     @include size (100%, auto);
 }
 
@@ -75,9 +97,8 @@ aside{
     border-right: 1em solid $color;
     white-space: nowrap;
     text-align: center;
-    animation: 
-        typing 3s infinite steps(14, end) backwards,
-        blinking-cursor 3s infinite;
+    @include prefix((animation: typing 3s infinite steps(14, end) backwards), webkit ms o);
+    @include prefix((animation: blinking-cursor 3s infinite), webkit ms o);
 }
 
 
