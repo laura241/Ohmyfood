@@ -17,12 +17,12 @@ body{
 
 .plat{
     @include size (60%, auto);
-    margin-right: 15%;
+    margin-right: 10%;
     margin-left: 10%;
 }
 
 .prix{
-    @include size (40%, auto);
+    @include size (30%, auto);
     margin-left: 10%;
 }
 
@@ -30,7 +30,9 @@ ul{
     list-style-type:circle;
 }
 
-#dessert{
-    width: 100%;
+
+
+#dessert_center{
     text-align: center;
+    width: 100%;
 }

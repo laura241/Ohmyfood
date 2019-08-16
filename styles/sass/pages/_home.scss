@@ -97,9 +97,12 @@ aside{
     border-right: 1em solid $color;
     white-space: nowrap;
     text-align: center;
-    @include prefix((animation: typing 3s infinite steps(14, end) backwards), webkit ms o);
-    @include prefix((animation: blinking-cursor 3s infinite), webkit ms o);
+    animation:
+                typing 3s infinite steps(14, end) backwards,
+                blinking-cursor 3s infinite;
 }
+    
+
 
 
 
