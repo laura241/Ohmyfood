@@ -2,7 +2,7 @@
 @import '../themes/theme';
 
 footer{
-    @include size (100%, 6em);
+    @include size (100%, auto);
     @include prefix((background-image:linear-gradient(to right, white, white, #FFFFFF80)), webkit ms o);
     @include border-style(double null null);
     @include border-width (3px null null);

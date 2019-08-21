@@ -36,3 +36,15 @@
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+@keyframes slide{
+  0% {transform: rotateY(0deg);}
+  50% {transform: rotateY(90deg);}
+  100% {transform: rotateY(180deg);}
+}
+
+@keyframes slide_inverse{
+  0%{transform: rotateY(-180deg);}
+  50% {transform: rotateY(90deg);}
+  100%{transform: rotateY(180deg);}
+}

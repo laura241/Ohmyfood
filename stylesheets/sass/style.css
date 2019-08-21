@@ -14,7 +14,6 @@ body {
   background-repeat: no-repeat;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  perspective: 800px;
 }
 
 h1 {
@@ -80,7 +79,6 @@ body {
   background-repeat: no-repeat;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  perspective: 800px;
 }
 
 h1 {
@@ -216,114 +214,38 @@ footer p {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-@keyframes slide {
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(90deg);
-  }
-  100% {
-    transform: rotateY(180deg);
-  }
-}
-@keyframes slide_inverse {
-  0% {
-    transform: rotateY(-180deg);
-  }
-  50% {
-    transform: rotateY(90deg);
-  }
-  100% {
-    transform: rotateY(180deg);
-  }
-}
 #container {
-  width: 100%;
-  height: 720px;
+  margin: 5% 10% auto;
   overflow: hidden;
+  display: flex;
 }
 
-.slider {
-  width: 35%;
-  height: 300px;
-  position: absolute;
-  transition: 5s;
-  backface-visibility: hidden;
+.photo_menu {
+  width: 30%;
+  height: 350px;
 }
-
-.slider_photo {
-  z-index: 100;
-}
-.slider_photo:hover {
-  -webkit-transform: rotateY(360deg);
-  -ms-transform: rotateY(360deg);
-  -o-transform: rotateY(360deg);
-  transform: rotateY(360deg);
-}
-
-.slider_menu {
-  z-index: 50;
-  -webkit-transform: rotateY(-180deg);
-  -ms-transform: rotateY(-180deg);
-  -o-transform: rotateY(-180deg);
-  transform: rotateY(-180deg);
-}
-
-.slider_photo:hover + .slider_menu {
-  -webkit-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  -o-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-  transition: 5s;
+.photo_menu :hover {
+  -webkit-animation: shake 0.5s;
+  -ms-animation: shake 0.5s;
+  -o-animation: shake 0.5s;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
 }
 
 #menu_note {
   background: url(../images/menunote.jpg);
-  top: 15%;
-  left: 10%;
-}
-
-#carte_note {
-  background: url(../images/home_menu1.png);
-  top: 15%;
-  left: 10%;
 }
 
 #menu_chic {
   background: url(../images/menuchic.jpg);
-  top: 15%;
-  right: 10%;
-}
-
-#carte_chic {
-  background: url(../images/home_menu2.png);
-  top: 15%;
-  right: 10%;
 }
 
 #menu_delice {
   background: url(../images/menudelice.jpg);
-  top: 45%;
-  left: 10%;
-}
-
-#carte_delice {
-  background: url(../images/home_menu3.png);
-  top: 45%;
-  left: 10%;
 }
 
 #menu_palette {
   background: url(../images/menupalette.jpg);
-  top: 45%;
-  right: 10%;
-}
-
-#carte_palette {
-  background: url(../images/home_menu4.png);
-  top: 45%;
-  right: 10%;
 }
 
 .title_restaurant {
@@ -337,13 +259,15 @@ footer p {
 
 .title_menu {
   width: 100%;
-  height: 20px;
+  height: auto;
   color: white;
   text-shadow: -1px -1px 0 rgba(250, 250, 250, 0.3);
   background-color: #dec4c0;
   opacity: 0.8;
   font-size: 2em;
+  position: relative;
   text-align: center;
+  top: 30%;
 }
 
 #typewriter_text {
@@ -354,7 +278,7 @@ footer p {
   color: black;
   letter-spacing: 1em;
   margin: 0;
-  overflow: hidden;
+  overflow: auto;
   border-right: 1em solid #dec4c0;
   white-space: nowrap;
   text-align: center;
@@ -419,7 +343,6 @@ body {
   background-repeat: no-repeat;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  perspective: 800px;
 }
 
 h1 {
@@ -533,28 +456,6 @@ h2:before {
   }
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
-  }
-}
-@keyframes slide {
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(90deg);
-  }
-  100% {
-    transform: rotateY(180deg);
-  }
-}
-@keyframes slide_inverse {
-  0% {
-    transform: rotateY(-180deg);
-  }
-  50% {
-    transform: rotateY(90deg);
-  }
-  100% {
-    transform: rotateY(180deg);
   }
 }
 /* stylelint-disable order/properties-alphabetical-order */
