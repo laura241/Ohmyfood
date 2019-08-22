@@ -47,11 +47,11 @@ section{
 
 .title_menu{
     color: white;
-    @include size (100%, 79px);
+    @include size (100%, 85px);
     background-color: $color;
     opacity: 0.8;
     font-size: 2.5em;
-    line-height: 2.5em;
+    line-height: 85px;
     text-align: center;
     :hover{ animation: shake .5s infinite;}
 }
@@ -113,7 +113,6 @@ section{
     border-right: 1em solid $color;
     white-space: nowrap;
     text-align: center;
-    @include prefix((animation: typing 3s infinite steps(14,end) backwards), webkit ms o);
-    @include prefix((animation: blinking-cursor 3s infinite), webkit ms o);
+    @include prefix((animation: typing 3s infinite steps(14,end) backwards));
 }
 

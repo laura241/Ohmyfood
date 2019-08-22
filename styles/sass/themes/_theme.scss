@@ -13,15 +13,16 @@ body{
 
 h1{
     @include size (100%, 2em);
-    font-family: $font-stack-monaco, Arial, Helvetica, sans-serif;
+    font-family: $font-stack-lucida-grande, Arial, Helvetica, sans-serif;
     font-size: 3em;
-    color: $color;
+    color: black;
+    opacity: 0.8;
     text-align: center;
     margin: 3%;
 }
 
 h2{
-  font-family: $font-stack-monaco, Arial, Helvetica, sans-serif;
+  font-family: $font-stack-lucida-grande, Arial, Helvetica, sans-serif;
   font-size: 1.6em;
   position: relative;
   text-align: center;
