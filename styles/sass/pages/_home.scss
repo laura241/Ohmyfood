@@ -2,106 +2,110 @@
 @import '../abstracts/mixin';
 @import '../components/animation';
 
-
-#container{
-    @include size (100%, 720px);
-    overflow: hidden;
-}
-
-.slider{
-    @include size (35%, 300px);
-    position: absolute;
-    transition: 5s;
-    backface-visibility: hidden;
-}
-
-.slider_photo{
-    z-index: 100;
-    &:hover{
-        @include prefix((transform:rotateY(360deg)), webkit ms o);
-    }
-}
-
-.slider_menu{
-    z-index: 50;
-    @include prefix((transform:rotateY(-180deg)), webkit ms o);
-}
-
-.slider_photo:hover + .slider_menu{
-    @include prefix((transform:rotateY(0deg)), webkit ms o);
-    transition: 5s;
+section{
+    height: 684px;
 }
 
 #menu_note{
     background: url(../images/menunote.jpg);
-    top: 15%;
-    left: 10%;
 }
 
-#carte_note{
+#card_note{
     background: url(../images/home_menu1.png);
-    top: 15%;
-    left: 10%;
 }
 
 #menu_chic{
     background: url(../images/menuchic.jpg);
-    top: 15%;
-    right: 10%;
 }
 
-#carte_chic{
+#card_chic{
     background: url(../images/home_menu2.png);
-    top: 15%;
-    right: 10%;
-}
-#menu_delice{
-    background: url(../images/menudelice.jpg);
-    top: 45%;
-    left: 10%;
 }
 
-#carte_delice{
+#menu_delight{
+    background: url(../images/menudelice.jpg);
+}
+
+#card_delight{
     background: url(../images/home_menu3.png);
-    top: 45%;
-    left: 10%;
 }
 
 #menu_palette{
     background: url(../images/menupalette.jpg);
-    top: 45%;
-    right: 10%;
 }
 
-#carte_palette{
+#card_palette{
     background: url(../images/home_menu4.png);
-    top: 45%;
-    right: 10%;
 }
+
 
 .title_restaurant{ 
-        color: white;
-        margin-top: 9%;
-        height: 40px;
-        text-align: center;
-        line-height: 40px;
-        font-size: 4em;
+    color: white;
+    font-size: 3.8em;
+    text-align: center;
 }
 
 .title_menu{
-    @include size (100%, 20px);
     color: white;
-    text-shadow: -1px -1px 0 rgba(250,250,250,0.3);
+    @include size (100%, 79px);
     background-color: $color;
     opacity: 0.8;
-    font-size: 2em;
+    font-size: 2.5em;
+    line-height: 2.5em;
     text-align: center;
+    :hover{ animation: shake .5s infinite;}
+}
+
+.card-container {
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+.card-container:hover .card{
+    -webkit-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.card {
+    -webkit-transition: -webkit-transform 0.7s;
+    transition: transform 0.7s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.card-front, .card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-back {
+    -webkit-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+    :hover{ 
+        @include prefix((animation: shake .5s infinite), webkit ms o);}
+    }
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card {
+    width: 536px;
+    height: 300px;
+    margin: 5%;
+}
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 #typewriter_text{ 
     @include size (auto, 200px);
     line-height: 200px;
-    font-size: 1.8em;
+    font-size: 2em;
     color: black;
     letter-spacing: 1em;
     margin: 0;
@@ -109,14 +113,7 @@
     border-right: 1em solid $color;
     white-space: nowrap;
     text-align: center;
-    animation:
-                typing 3s infinite steps(14, end) backwards,
-                blinking-cursor 3s infinite;
+    @include prefix((animation: typing 3s infinite steps(14,end) backwards), webkit ms o);
+    @include prefix((animation: blinking-cursor 3s infinite), webkit ms o);
 }
-    
-
-
-
-
-
 

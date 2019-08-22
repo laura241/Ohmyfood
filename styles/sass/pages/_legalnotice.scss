@@ -1,0 +1,6 @@
+
+.legalnotice_text{
+    @include size (100%, auto);
+    text-align: justify;
+    @include margin (10%);
+}
