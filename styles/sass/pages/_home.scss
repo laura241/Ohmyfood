@@ -3,7 +3,7 @@
 @import '../components/animation';
 
 section{
-    height: 684px;
+    height: auto;
 }
 
 #menu_note{
@@ -62,16 +62,27 @@ section{
     display: flex;
     justify-content: space-around;
 }
+
 .card-container:hover .card{
     -webkit-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
+    @include respond-to(small) {
+        display: none;
+    }
+    @include respond-to(medium) {
+        display: none;
+    }
 }
+
 .card {
     -webkit-transition: -webkit-transform 0.7s;
     transition: transform 0.7s;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    @include respond-to(small) {
+        display: none;}
 }
+
 .card-front, .card-back {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -79,6 +90,7 @@ section{
     justify-content: center;
     align-items: center;
 }
+
 .card-back {
     -webkit-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
@@ -86,16 +98,19 @@ section{
         @include prefix((animation: shake .5s infinite), webkit ms o);}
     }
 
+
 .cards-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .card {
     width: 536px;
     height: 300px;
     margin: 5%;
 }
+
 .card-front, .card-back {
     position: absolute;
     width: 100%;
@@ -113,6 +128,4 @@ section{
     border-right: 1em solid $color;
     white-space: nowrap;
     text-align: center;
-    @include prefix((animation: typing 3s infinite steps(14,end) backwards));
-}
-
+    @include prefix((animation: typing 3s infinite steps(14,end) backwards));}

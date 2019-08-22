@@ -4,6 +4,7 @@
 body{
     margin:0;
     @include size (100%, 600px);
+    
     background: url(../images/menu.jpg);
     background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;

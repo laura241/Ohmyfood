@@ -229,7 +229,7 @@ footer p {
   }
 }
 section {
-  height: 684px;
+  height: auto;
 }
 
 #menu_note {
@@ -295,12 +295,27 @@ section {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
+@media (min-width: 767px) {
+  .card-container:hover .card {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .card-container:hover .card {
+    display: none;
+  }
+}
 
 .card {
   -webkit-transition: -webkit-transform 0.7s;
   transition: transform 0.7s;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+}
+@media (min-width: 767px) {
+  .card {
+    display: none;
+  }
 }
 
 .card-front, .card-back {
