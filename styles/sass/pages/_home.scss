@@ -12,6 +12,7 @@ section{
 
 #card_note{
     background: url(../images/home_menu1.png);
+    background-color: #fce0dc;
 }
 
 #menu_chic{
@@ -66,12 +67,6 @@ section{
 .card-container:hover .card{
     -webkit-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
-    @include respond-to(small) {
-        display: none;
-    }
-    @include respond-to(medium) {
-        display: none;
-    }
 }
 
 .card {
@@ -79,8 +74,6 @@ section{
     transition: transform 0.7s;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    @include respond-to(small) {
-        display: none;}
 }
 
 .card-front, .card-back {
@@ -118,7 +111,7 @@ section{
 }
 
 #typewriter_text{ 
-    @include size (auto, 200px);
+    @include size (auto, auto);
     line-height: 200px;
     font-size: 2em;
     color: black;
@@ -128,4 +121,7 @@ section{
     border-right: 1em solid $color;
     white-space: nowrap;
     text-align: center;
-    @include prefix((animation: typing 3s infinite steps(14,end) backwards));}
+    @include prefix((animation: typing 3s infinite steps(14,end) backwards));
+    @include respond-to(small) {
+        font-size: 0.5em;}
+}
