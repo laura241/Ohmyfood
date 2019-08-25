@@ -10,6 +10,11 @@ body {
   font-size: 1em;
   perspective: 800px;
 }
+@media (max-width: 959px) {
+  body {
+    font-size: 0.8em;
+  }
+}
 
 h1 {
   height: 2em;
@@ -21,6 +26,11 @@ h1 {
   text-align: center;
   margin: 3%;
 }
+@media (max-width: 959px) {
+  h1 {
+    font-size: 2em;
+  }
+}
 
 h2 {
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", sans-serif, Arial, Helvetica, sans-serif;
@@ -31,6 +41,11 @@ h2 {
   overflow: hidden;
   margin-left: 14px;
   margin-right: 14px;
+}
+@media (max-width: 959px) {
+  h2 {
+    font-size: 1.2em;
+  }
 }
 
 h2:before, h2:after {
@@ -60,7 +75,7 @@ header {
 }
 @media (max-width: 959px) {
   header {
-    height: 6em;
+    height: 7em;
     width: 100%;
   }
 }
@@ -81,6 +96,11 @@ body {
   font-size: 1em;
   perspective: 800px;
 }
+@media (max-width: 959px) {
+  body {
+    font-size: 0.8em;
+  }
+}
 
 h1 {
   height: 2em;
@@ -92,6 +112,11 @@ h1 {
   text-align: center;
   margin: 3%;
 }
+@media (max-width: 959px) {
+  h1 {
+    font-size: 2em;
+  }
+}
 
 h2 {
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", sans-serif, Arial, Helvetica, sans-serif;
@@ -102,6 +127,11 @@ h2 {
   overflow: hidden;
   margin-left: 14px;
   margin-right: 14px;
+}
+@media (max-width: 959px) {
+  h2 {
+    font-size: 1.2em;
+  }
 }
 
 h2:before, h2:after {
@@ -206,7 +236,6 @@ figure {
 
 #card_note {
   background-color: #fce0dc;
-  text-align: center;
 }
 
 #menu_chic {
@@ -256,6 +285,11 @@ figure {
 }
 .title_menu :hover {
   animation: shake 0.5s infinite;
+}
+@media (max-width: 959px) {
+  .title_menu {
+    font-size: 1.5em;
+  }
 }
 
 .card-container {
@@ -355,6 +389,10 @@ figure {
   }
 }
 
+.photo_menu {
+  max-width: 50%;
+}
+
 body {
   width: 100%;
   height: auto;
@@ -366,6 +404,13 @@ body {
   margin-left: 5%;
   width: 90%;
   height: 43em;
+}
+@media (max-width: 959px) {
+  .page_menu {
+    height: 50em;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
 }
 
 .menu_section {
@@ -380,6 +425,11 @@ body {
   height: auto;
   margin-right: 10%;
   margin-left: 10%;
+}
+@media (max-width: 959px) {
+  .plat {
+    margin: 0;
+  }
 }
 
 .prix {
@@ -416,6 +466,11 @@ body {
   font-size: 1em;
   perspective: 800px;
 }
+@media (max-width: 959px) {
+  body {
+    font-size: 0.8em;
+  }
+}
 
 h1 {
   height: 2em;
@@ -427,6 +482,11 @@ h1 {
   text-align: center;
   margin: 3%;
 }
+@media (max-width: 959px) {
+  h1 {
+    font-size: 2em;
+  }
+}
 
 h2 {
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", sans-serif, Arial, Helvetica, sans-serif;
@@ -437,6 +497,11 @@ h2 {
   overflow: hidden;
   margin-left: 14px;
   margin-right: 14px;
+}
+@media (max-width: 959px) {
+  h2 {
+    font-size: 1.2em;
+  }
 }
 
 h2:before, h2:after {

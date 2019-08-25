@@ -17,8 +17,6 @@ figure{
 
 #card_note{ 
     background-color: #fce0dc;
-    text-align: center;
-
 }
 
 #menu_chic{
@@ -64,6 +62,8 @@ figure{
     line-height: 85px;
     text-align: center;
     :hover{ animation: shake .5s infinite;}
+    @include respond-to(small) {
+        font-size: 1.5em;}
 }
 
 .card-container {
@@ -142,4 +142,8 @@ figure{
     @include prefix((animation: typing 3s infinite steps(14,end) backwards));
     @include respond-to(small) {
         font-size: 1em;}
+}
+
+.photo_menu{
+    max-width: 50%
 }

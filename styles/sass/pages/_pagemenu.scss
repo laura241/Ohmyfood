@@ -7,7 +7,10 @@ body{
     @include padding (0 0 0 0);
     @include margin (null 5%);
     @include size (90%, 43em);
-}
+    @include respond-to(small) {
+        height: 50em;
+        @include margin (1% null)}
+    }
 
 .menu_section{ 
     @include size (100%, auto);
@@ -19,7 +22,10 @@ body{
     @include size (60%, auto);
     margin-right: 10%;
     margin-left: 10%;
-}
+    @include respond-to(small) {
+        @include margin (0 0);}
+    }
+
 
 .prix{
     @include size (30%, auto);
