@@ -12,8 +12,14 @@ header{
     @include border-color (null null $color);
     @include prefix((background-image:linear-gradient(to right, white, white, #FFFFFF80)), webkit ms o);
     opacity: 0.7;
-    text-align: left;}
+    text-align: left;
+    @include respond-to(small) {
+        @include size (100%, 6em);}
+}
 
+#logo{
+    max-width: 70%;
+}
 
 
 

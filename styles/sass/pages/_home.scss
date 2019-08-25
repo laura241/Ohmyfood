@@ -6,13 +6,19 @@ section{
     height: auto;
 }
 
+figure{
+    margin: 0;
+}
+
+
 #menu_note{
     background: url(../images/menunote.jpg);
 }
 
-#card_note{
-    background: url(../images/home_menu1.png);
+#card_note{ 
     background-color: #fce0dc;
+    text-align: center;
+
 }
 
 #menu_chic{
@@ -20,7 +26,7 @@ section{
 }
 
 #card_chic{
-    background: url(../images/home_menu2.png);
+    background-color: #fff5fe;
 }
 
 #menu_delight{
@@ -28,7 +34,7 @@ section{
 }
 
 #card_delight{
-    background: url(../images/home_menu3.png);
+    background-color: #eef0ef;
 }
 
 #menu_palette{
@@ -36,7 +42,7 @@ section{
 }
 
 #card_palette{
-    background: url(../images/home_menu4.png);
+    background-color: #fdfffd;
 }
 
 
@@ -44,13 +50,16 @@ section{
     color: white;
     font-size: 3.8em;
     text-align: center;
-}
+    @include respond-to(small) {
+        font-size: 2em;}
+    }
+
 
 .title_menu{
     color: white;
     @include size (100%, 85px);
     background-color: $color;
-    opacity: 0.8;
+    opacity: 0.5;
     font-size: 2.5em;
     line-height: 85px;
     text-align: center;
@@ -62,6 +71,11 @@ section{
     perspective: 500px;
     display: flex;
     justify-content: space-around;
+    width: 48%;
+    margin: 1%;
+    @include respond-to(small) {
+        width: 95%;
+        margin: 3%;}
 }
 
 .card-container:hover .card{
@@ -82,6 +96,9 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .card-back {
@@ -96,23 +113,24 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
+    margin: 2%;
+    @include respond-to(small) {
+        flex-direction: column;}
 }
+
 
 .card {
-    width: 536px;
-    height: 300px;
-    margin: 5%;
+    width: 70%;
+    height: 320px;
+    @include respond-to(small) {
+        height: 150px;}
 }
 
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
 
 #typewriter_text{ 
     @include size (auto, auto);
-    line-height: 200px;
+    line-height: 170px;
     font-size: 2em;
     color: black;
     letter-spacing: 1em;
@@ -123,5 +141,5 @@ section{
     text-align: center;
     @include prefix((animation: typing 3s infinite steps(14,end) backwards));
     @include respond-to(small) {
-        font-size: 0.5em;}
+        font-size: 1em;}
 }
