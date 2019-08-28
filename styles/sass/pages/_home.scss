@@ -15,7 +15,6 @@ figure{
     background: url(../images/menunote.jpg);
     @include respond-to(small) {
         background: url(../images/menunote_min.jpg)}
-
 }
 
 #card_note{ 
@@ -176,7 +175,8 @@ figure{
 }
 
 .photo_menu{
-    max-width: 50%
+    max-width: 40%;
+    height: auto;
 }
 
 
