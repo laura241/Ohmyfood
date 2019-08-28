@@ -20,7 +20,7 @@ h1{
     color: black;
     opacity: 0.8;
     text-align: center;
-    margin: 3%;
+    margin-top: 3%;
     @include respond-to(small) {
       font-size: 2em;}
   }

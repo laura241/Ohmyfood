@@ -1,6 +1,6 @@
 
-.legalnotice_text{
-    @include size (100%, auto);
-    @include margin (5% 5%);
+#legalnotice_text{
+    @include size (auto, auto);
+    margin: 0;
     text-align: justify;
 }

@@ -13,6 +13,9 @@ figure{
 
 #menu_note{
     background: url(../images/menunote.jpg);
+    @include respond-to(small) {
+        background: url(../images/menunote_min.jpg)}
+
 }
 
 #card_note{ 
@@ -21,6 +24,8 @@ figure{
 
 #menu_chic{
     background: url(../images/menuchic.jpg);
+    @include respond-to(small) {
+        background: url(../images/menuchic_min.jpg)}
 }
 
 #card_chic{
@@ -29,6 +34,8 @@ figure{
 
 #menu_delight{
     background: url(../images/menudelice.jpg);
+    @include respond-to(small) {
+        background: url(../images/menudelice_min.jpg)}
 }
 
 #card_delight{
@@ -37,6 +44,8 @@ figure{
 
 #menu_palette{
     background: url(../images/menupalette.jpg);
+    @include respond-to(small) {
+        background: url(../images/menupalette_min.jpg)}
 }
 
 #card_palette{
@@ -67,9 +76,11 @@ figure{
 }
 
 .card-container {
-    -webkit-perspective: 500px;
-    perspective: 500px;
+    @include prefix((perspective: 500px), webkit o);
+    display: -webkit-box;
     display: flex;
+    display: -ms-flexbox;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     width: 48%;
     margin: 1%;
@@ -79,52 +90,72 @@ figure{
 }
 
 .card-container:hover .card{
-    -webkit-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
+    @include prefix((transform: rotateY(180deg)), webkit o);
+    @media screen and (min-width:0\0) {
+        transform: perspective(500px) rotateY(180deg);
+        -webkit-transform: perspective(500px) rotateY(180deg); }
 }
 
 .card {
-    -webkit-transition: -webkit-transform 0.7s;
-    transition: transform 0.7s;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+    @include prefix((transition: transform .7s), webkit o);
+    @include prefix((transform-style: preserve-3d), webkit o);
+    width: 70%;
+    height: 320px;
+    @include respond-to(small) {
+        height: 150px;}
 }
 
+
+
 .card-front, .card-back {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    @include prefix((backface-visibility: hidden), webkit o);
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    display: -ms-flexbox;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     width: 100%;
     height: 100%;
+    @media screen and (min-width:0\0) {
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;}
 }
 
 .card-back {
-    -webkit-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
+    @include prefix((transform: rotateY(180deg)), webkit o);
+    @media screen and (min-width:0\0) {
+        -webkit-transform: perspective(500px) rotateY(180deg);
+        transform: perspective(500px) rotateY(180deg); }
     :hover{ 
         @include prefix((animation: shake .5s infinite), webkit ms o);}
     }
 
 
+
 .cards-container{
+    display: -webkit-box;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 2%;
     @include respond-to(small) {
-        flex-direction: column;}
-}
-
-
-.card {
-    width: 70%;
-    height: 320px;
-    @include respond-to(small) {
-        height: 150px;}
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin: 5%}
 }
 
 
@@ -139,11 +170,13 @@ figure{
     border-right: 1em solid $color;
     white-space: nowrap;
     text-align: center;
-    @include prefix((animation: typing 3s infinite steps(14,end) backwards));
+    @include prefix((animation: typing 3s infinite steps(14,end) backwards), webkit ms o);
     @include respond-to(small) {
-        font-size: 1em;}
+        font-size: 1.4em;}
 }
 
 .photo_menu{
     max-width: 50%
 }
+
+
