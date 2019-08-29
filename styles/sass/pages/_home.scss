@@ -10,6 +10,81 @@ figure{
     margin: 0;
 }
 
+.cards-container{
+    display: -webkit-box;
+    display: flex;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 2%;
+    @include respond-to(small) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin: 5%}
+}
+
+.card-container {
+    perspective: 500px;
+    display: flex;
+    justify-content: space-around;
+    width: 48%;
+    margin: 1%;
+    @include respond-to(small) {
+        width: 95%;
+        margin: 3%;}
+}
+
+.card-container:hover .card{
+    transform: rotateY(180deg);
+}
+
+.card {
+    transition: transform .7s;
+    transform-style: preserve-3d;
+    width: 70%;
+    height: 320px;
+    @include respond-to(small) {
+        height: 150px;}
+}
+
+
+.card-front, .card-back {
+    backface-visibility: hidden;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    :hover{ 
+        @include prefix((animation: shake .5s infinite), webkit ms o);}
+    }
+
+.photo_menu{
+    max-width: 80%;
+    height: auto;
+    @include respond-to(medium) {
+        max-width: 45%;}
+    @include respond-to(small) {
+        max-width: 40%;}
+    }
+
+
 
 #menu_note{
     background: url(../images/menunote.jpg);
@@ -54,7 +129,7 @@ figure{
 
 .title_restaurant{ 
     color: white;
-    font-size: 3.8em;
+    font-size: 2.9em;
     text-align: center;
     @include respond-to(medium) {
         font-size: 2.8em;}
@@ -77,101 +152,6 @@ figure{
         font-size: 1.5em;}
 }
 
-.card-container {
-    @include prefix((perspective: 500px), webkit o);
-    display: -webkit-box;
-    display: flex;
-    display: -ms-flexbox;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    width: 48%;
-    margin: 1%;
-    @include respond-to(small) {
-        width: 95%;
-        margin: 3%;}
-}
-
-.card-container:hover .card{
-    @include prefix((transform: rotateY(180deg)), webkit o);
-    @media screen and (min-width:0\0) {
-        transform: perspective(500px) rotateY(180deg);
-        -webkit-transform: perspective(500px) rotateY(180deg); }
-}
-
-.card {
-    @include prefix((transition: transform .7s), webkit o);
-    @include prefix((transform-style: preserve-3d), webkit o);
-    width: 70%;
-    height: 320px;
-    @include respond-to(small) {
-        height: 150px;}
-}
-
-
-
-.card-front, .card-back {
-    @include prefix((backface-visibility: hidden), webkit o);
-    display: -webkit-box;
-    display: flex;
-    display: -ms-flexbox;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    @media screen and (min-width:0\0) {
-        position: absolute;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;}
-}
-
-.card-back {
-    @include prefix((transform: rotateY(180deg)), webkit o);
-    @include respond-to(medium) {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        margin: 5%}
-    @include respond-to(small) {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        margin: 5%}
-    @media screen and (min-width:0\0) {
-        -webkit-transform: perspective(500px) rotateY(180deg);
-        transform: perspective(500px) rotateY(180deg); }
-    :hover{ 
-        @include prefix((animation: shake .5s infinite), webkit ms o);}
-    }
-
-
-
-.cards-container{
-    display: -webkit-box;
-    display: flex;
-    display: -ms-flexbox;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 2%;
-    @include respond-to(small) {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        margin: 5%}
-}
-
 
 #typewriter_text{ 
     @include size (auto, auto);
@@ -191,12 +171,7 @@ figure{
         font-size: 1.4em;}
 }
 
-.photo_menu{
-    height: auto;
-    @include respond-to(medium) {
-        max-width: 100%;}
-    @include respond-to(small) {
-        max-width: 100%;}
-}
+
+
 
 
