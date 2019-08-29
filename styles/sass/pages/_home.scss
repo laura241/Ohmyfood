@@ -56,20 +56,23 @@ figure{
     color: white;
     font-size: 3.8em;
     text-align: center;
+    @include respond-to(medium) {
+        font-size: 2.8em;}
     @include respond-to(small) {
         font-size: 2em;}
     }
 
 
 .title_menu{
-    color: white;
+    color: black;
     @include size (100%, 85px);
-    background-color: $color;
     opacity: 0.5;
     font-size: 2.5em;
     line-height: 85px;
     text-align: center;
     :hover{ animation: shake .5s infinite;}
+    @include respond-to(medium) {
+        font-size: 2em;}
     @include respond-to(small) {
         font-size: 1.5em;}
 }
@@ -128,6 +131,18 @@ figure{
 
 .card-back {
     @include prefix((transform: rotateY(180deg)), webkit o);
+    @include respond-to(medium) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin: 5%}
+    @include respond-to(small) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin: 5%}
     @media screen and (min-width:0\0) {
         -webkit-transform: perspective(500px) rotateY(180deg);
         transform: perspective(500px) rotateY(180deg); }
@@ -170,13 +185,18 @@ figure{
     white-space: nowrap;
     text-align: center;
     @include prefix((animation: typing 3s infinite steps(14,end) backwards), webkit ms o);
+    @include respond-to(medium) {
+        font-size: 1.8em;}
     @include respond-to(small) {
         font-size: 1.4em;}
 }
 
 .photo_menu{
-    max-width: 40%;
     height: auto;
+    @include respond-to(medium) {
+        max-width: 100%;}
+    @include respond-to(small) {
+        max-width: 100%;}
 }
 
 
