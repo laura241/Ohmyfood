@@ -178,6 +178,11 @@ footer p {
   text-align: right;
 }
 
+@supports (-ms-ime-align: auto) {
+  footer {
+    background-image: linear-gradient(to right, #fafafa 0%, #fafafa 50%, white 51%, white 100%);
+  }
+}
 @keyframes typing {
   from {
     width: 0;

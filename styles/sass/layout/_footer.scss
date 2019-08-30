@@ -21,4 +21,8 @@ footer{
     }
 }
 
-
+@supports (-ms-ime-align: auto) {
+    footer {
+        background-image: linear-gradient(to right, rgb(250,250,250) 0%, rgb(250,250,250) 50%, rgb(255,255,255) 51%, rgba(255,255,255) 100%);
+    }
+  }
