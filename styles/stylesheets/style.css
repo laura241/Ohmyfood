@@ -161,9 +161,8 @@ footer {
   border-top-style: double;
   border-top-width: 3px;
   border-top-color: #dec4c0;
-  position: fixed;
   bottom: 0;
-  right: 0;
+  left: 0;
   display: flex;
   justify-content: space-around;
   font-size: 0.6em;
@@ -185,14 +184,6 @@ footer p {
   }
   to {
     width: 100%;
-  }
-}
-@keyframes blinking-cursor {
-  from, to {
-    border-color: #dec4c0;
-  }
-  50% {
-    border-color: #dec4c0;
   }
 }
 @keyframes shake {
@@ -423,28 +414,29 @@ figure {
 
 #typewriter_text {
   width: auto;
-  height: auto;
+  height: 200px;
   line-height: 170px;
-  font-size: 2em;
+  font-size: 2.3em;
   color: black;
   letter-spacing: 1em;
   overflow: hidden;
   border-right: 1em solid #dec4c0;
   white-space: nowrap;
   text-align: center;
-  -webkit-animation: typing 3s infinite steps(14, end) backwards;
-  -ms-animation: typing 3s infinite steps(14, end) backwards;
-  -o-animation: typing 3s infinite steps(14, end) backwards;
-  animation: typing 3s infinite steps(14, end) backwards;
+  margin: 2%;
+  -webkit-animation: typing 3.2s infinite steps(14, end) backwards;
+  -ms-animation: typing 3.2s infinite steps(14, end) backwards;
+  -o-animation: typing 3.2s infinite steps(14, end) backwards;
+  animation: typing 3.2s infinite steps(14, end) backwards;
 }
 @media (min-width: 768px), (max-width: 959px) {
   #typewriter_text {
-    font-size: 1.8em;
+    font-size: 2em;
   }
 }
 @media (max-width: 767px) {
   #typewriter_text {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
 }
 
@@ -505,7 +497,7 @@ ul {
 #legalnotice_text {
   width: auto;
   height: auto;
-  margin: 0;
+  margin: 4%;
   text-align: justify;
 }
 
@@ -578,14 +570,6 @@ h2:before {
   }
   to {
     width: 100%;
-  }
-}
-@keyframes blinking-cursor {
-  from, to {
-    border-color: #dec4c0;
-  }
-  50% {
-    border-color: #dec4c0;
   }
 }
 @keyframes shake {

@@ -154,20 +154,21 @@ figure{
 
 
 #typewriter_text{ 
-    @include size (auto, auto);
+    @include size (auto, 200px);
     line-height: 170px;
-    font-size: 2em;
+    font-size: 2.3em;
     color: black;
     letter-spacing: 1em;
     overflow: hidden;
     border-right: 1em solid $color;
     white-space: nowrap;
     text-align: center;
-    @include prefix((animation: typing 3s infinite steps(14,end) backwards), webkit ms o);
+    margin: 2%;
+    @include prefix((animation: typing 3.2s infinite steps(14,end) backwards), webkit ms o);
     @include respond-to(medium) {
-        font-size: 1.8em;}
+        font-size: 2em;}
     @include respond-to(small) {
-        font-size: 1.4em;}
+        font-size: 1.5em;}
 }
 
 
