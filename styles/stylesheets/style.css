@@ -2,9 +2,10 @@
 /* stylelint-enable */
 body {
   margin: 0;
-  height: 600px;
+  height: auto;
   width: 100%;
   background: url(../images/menu.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
@@ -91,9 +92,10 @@ header {
 /* stylelint-enable */
 body {
   margin: 0;
-  height: 600px;
+  height: auto;
   width: 100%;
   background: url(../images/menu.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
@@ -159,6 +161,9 @@ footer {
   border-top-style: double;
   border-top-width: 3px;
   border-top-color: #dec4c0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
   display: flex;
   justify-content: space-around;
   font-size: 0.6em;
@@ -423,7 +428,6 @@ figure {
   font-size: 2em;
   color: black;
   letter-spacing: 1em;
-  margin: 0;
   overflow: hidden;
   border-right: 1em solid #dec4c0;
   white-space: nowrap;
@@ -509,9 +513,10 @@ ul {
 /* stylelint-enable */
 body {
   margin: 0;
-  height: 600px;
+  height: auto;
   width: 100%;
   background: url(../images/menu.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;

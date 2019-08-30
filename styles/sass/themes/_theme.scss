@@ -3,8 +3,9 @@
 
 body{
     margin:0;
-    @include size (100%, 600px);
+    @include size (100%, auto);
     background: url(../images/menu.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
