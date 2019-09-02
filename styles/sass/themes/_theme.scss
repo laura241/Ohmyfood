@@ -15,6 +15,16 @@ body{
   }
 
 h1{
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    @include respond-to(medium) {
+        font-size: 1.1em;}
+    @include respond-to(small) {
+        font-size: 1em;}
+}
+
+h2{
     @include size (100%, 2em);
     font-family: $font-stack-lucida-grande, Arial, Helvetica, sans-serif;
     font-size: 3em;
@@ -27,7 +37,7 @@ h1{
   }
 
 
-h2{
+h3{
   font-family: $font-stack-lucida-grande, Arial, Helvetica, sans-serif;
   font-size: 1.6em;
   position: relative;
@@ -41,7 +51,7 @@ h2{
 }
 
 
-h2:before, h2:after{
+h3:before, h3:after{
   content :".";
   border-bottom: solid 1px #000;
   position: absolute;
@@ -49,6 +59,6 @@ h2:before, h2:after{
   width: 100%;
   }
 
-  h2:before{
+  h3:before{
     margin-left: -100%;
 }
